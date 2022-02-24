@@ -5,17 +5,17 @@ Param(
 )
 
 if ([string]::IsNullOrEmpty($url)) {
-  Write-Error "URL not define. (Ex: -url http://127.0.0.1/#PATH_G#)"
+  Write-Host "URL not define. (Ex: -url http://127.0.0.1/#PATH_G#)"
   exit
 }
 
 if ([string]::IsNullOrEmpty($path)) {
-  Write-Error "Path not define. (Ex: -path c:\admin\public\path.txt)"
+  Write-Host "Path not define. (Ex: -path c:\admin\public\path.txt)"
   exit
 }
 
 if(![System.IO.File]::Exists($path)){
-  Write-Error "Path ($path) not Exist!"
+  Write-Host "Path ($path) not Exist!"
   exit
 }
 
